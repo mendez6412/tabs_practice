@@ -1,46 +1,24 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-} */
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.flex-container {
-  display: grid;
-  height: 100vh;
-  width: 100vw;
-  grid-template-columns: auto;
-  grid-template-rows: 20vh 80vh;
-  grid-template-areas: "tab"
-                        "tabContent";
+.tabs {
+  position: relative;   
+  min-height: 200px; /* This part sucks */
+  clear: both;
 }
 
 .tab {
-  grid-area: tab;
+  float: left;
 }
 
-.tabContent {
-  grid-area: tabContent;
+.content {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  background: white;
+  width: 50vw;
+  bottom: 0;
+  padding: 20px;
+  border: 1px solid #ccc; 
+}
+
+.active {
+  background: yellow;
 }

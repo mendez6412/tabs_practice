@@ -33,24 +33,22 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header> */}
-          {Object.keys(this.props.tabs).length === 0 ?
-            <button className="populateButton" onClick={this._populate}>Hello</button>
-            :
-            <div className="flex-container">
-              {this._displayTabs()}
-            </div>
-          }
+        {Object.keys(this.props.tabs).length === 0 ?
+          <button className="populateButton" onClick={this._populate}>Hello</button>
+          :
+          <div className="tabs">
+            {this._displayTabs()}
+          </div>
+        }
       </div>
     );
   }
 }
 
 function mapStateToProps(state) {
-  return { tabs: state.tabValues.tabs }
+  return { 
+    tabs: state.tabValues.tabs 
+  }
 }
 
 const mapDispatchToProps = {
